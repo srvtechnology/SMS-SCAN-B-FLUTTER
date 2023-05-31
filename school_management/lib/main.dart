@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:school_management/routes/landing_page.dart';
+import 'package:school_management/routes/splashscreen.dart';
 import 'package:school_management/routes/schoolCode_page.dart';
 void main() {
   runApp(const MyApp());
