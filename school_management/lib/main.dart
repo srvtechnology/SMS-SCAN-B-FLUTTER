@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'NedUp',
-      initialRoute: SchoolCodePage.routename,
+      initialRoute: LandingPage.routename,
       routes: {
         LandingPage.routename:(context)=>LandingPage(),
         SchoolCodePage.routename:(context)=>SchoolCodePage()

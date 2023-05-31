@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'dart:async';
+
+import 'package:school_management/routes/schoolCode_page.dart';
 
 class LandingPage extends StatefulWidget {
   static String routename = "/landing";
@@ -8,6 +11,19 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+
+  @override
+  void initState(){
+    super.initState();
+    startTime();
+  }
+  startTime() async {
+    var duration = new Duration(seconds: 6);
+    return new Timer(duration, route);
+  }
+  route() {
+    Navigator.pushReplacementNamed(context, '/schoolcode');
+  }
   @override
   Widget build(BuildContext context) {
     double width=MediaQuery.of(context).size.width;
@@ -30,7 +46,7 @@ class _LandingPageState extends State<LandingPage> {
           children: [
             Padding(
               padding: EdgeInsets.only(left: 20,top: 20,bottom: 25),
-              child: SvgPicture.asset('assets/logo.svg',width:100,height:100,fit: BoxFit.scaleDown,),
+              child: Image.asset('assets/nyoLogo.png'),
             ),
             Stack(
               children: [
