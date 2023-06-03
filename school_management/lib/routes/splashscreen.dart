@@ -4,13 +4,13 @@ import 'dart:async';
 
 import 'package:school_management/routes/schoolCode_page.dart';
 
-class LandingPage extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
   static String routename = "/landing";
   @override
-  State<LandingPage> createState() => _LandingPageState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _LandingPageState extends State<LandingPage> {
+class _SplashScreenState extends State<SplashScreen> {
 
   @override
   void initState(){
