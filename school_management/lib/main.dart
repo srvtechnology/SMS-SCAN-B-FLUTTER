@@ -4,7 +4,9 @@ import 'package:school_management/routes/addHomework_screen.dart';
 import 'package:school_management/routes/attendance_screen.dart';
 import 'package:school_management/routes/grades_screen.dart';
 import 'package:school_management/routes/individualGrade_screen.dart';
+import 'package:school_management/routes/leaveApplication_page.dart';
 import 'package:school_management/routes/main_page.dart';
+import 'package:school_management/routes/resources_screen.dart';
 import 'package:school_management/routes/splashscreen.dart';
 import 'package:school_management/routes/schoolCode_page.dart';
 import 'package:school_management/routes/IndividualSelect_page.dart';
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'NedUp',
-      initialRoute:GradesScreen.routename,
+      initialRoute:ResourcePage.routename,
       locale: DevicePreview.locale(context),
       useInheritedMediaQuery: true,
       builder: DevicePreview.appBuilder,
@@ -39,7 +41,9 @@ class MyApp extends StatelessWidget {
         AttendanceScreen.routename:(context)=>AttendanceScreen(),
         IndividualGradeScreen.routename:(context)=>IndividualGradeScreen(),
         LandingScreen.routename:(context)=>LandingScreen(),
-        AddPage.routename:(context)=>AddPage()
+        AddPage.routename:(context)=>AddPage(),
+        LeaveApplicationPage.routename:(context)=>LeaveApplicationPage(),
+        ResourcePage.routename:(context)=>ResourcePage()
       },
     );
   }

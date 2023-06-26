@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:school_management/components/user_component.dart';
 import 'package:dotted_line/dotted_line.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
+
 class HomeLayout extends StatelessWidget{
   final Widget child;
   HomeLayout({required this.child});
@@ -34,6 +36,45 @@ class HomeLayout extends StatelessWidget{
               child
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar:  Container(
+        margin: EdgeInsets.symmetric(horizontal: 12),
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        decoration: BoxDecoration(
+            border: Border(
+                top: BorderSide(
+                    color: Color(0xffFEC20E),
+                    width: 1
+                )
+            )
+        ),
+        child: SafeArea(
+          child: GNav(
+            activeColor: Color(0xffFEC20E),
+            tabBackgroundColor: Color(0xff58595B),
+            padding: EdgeInsets.all(10),
+            gap: 6,
+            tabs: [
+              GButton(
+                icon:Icons.home,
+                text: 'Home',
+              ),
+              GButton(
+                icon: Icons.message,
+                text: 'Likes',
+              ),
+              GButton(
+                icon: Icons.search,
+                text: 'Search',
+              ),
+              GButton(
+                icon: Icons.person,
+                text: 'Profile',
+              ),
+            ],
+          ),
+
         ),
       ),
     );
